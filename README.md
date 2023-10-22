@@ -1,5 +1,8 @@
 # PdfTools
 
+Using Avalonia UI. It allows to create multi-platform apps with the same code.
+The screenshots bellow was taken using Ubuntu 23.04, running this C# app.
+
 ![Screenshot from 2023-10-22 16-18-13](https://github.com/BrenoCarneiro/PdfTools/assets/102473053/e991d881-a1bb-49a7-958c-9b92af036d7a)
 
 
