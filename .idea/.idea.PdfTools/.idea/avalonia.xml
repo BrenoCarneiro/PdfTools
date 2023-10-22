@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AvaloniaProject">
+    <option name="projectPerEditor">
+      <map>
+        <entry key="PdfTools/App.axaml" value="PdfTools/PdfTools.csproj" />
+        <entry key="PdfTools/Views/ConvertView.axaml" value="PdfTools/PdfTools.csproj" />
+        <entry key="PdfTools/Views/MainWindow.axaml" value="PdfTools/PdfTools.csproj" />
+        <entry key="PdfTools/Views/MergeView.axaml" value="PdfTools/PdfTools.csproj" />
+      </map>
+    </option>
+  </component>
+</project>

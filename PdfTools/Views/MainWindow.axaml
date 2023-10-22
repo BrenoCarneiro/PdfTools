@@ -1,0 +1,71 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:PdfTools.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="250" d:DesignHeight="200"
+        x:Class="PdfTools.Views.MainWindow"
+        x:DataType="vm:MainWindowViewModel"
+        Icon="/Assets/pdftools.ico"
+        WindowStartupLocation="CenterScreen"
+        Width="650"
+        Height="250"
+        Title="PdfTools">
+
+    <Design.DataContext>
+        <vm:MainWindowViewModel/>
+    </Design.DataContext>
+    
+    <TabControl HorizontalAlignment="Center">
+        <TabItem Header="Convert">
+            <Grid 
+                ColumnDefinitions="*, Auto, Auto" 
+                RowDefinitions="Auto, Auto, Auto, Auto, Auto, Auto" 
+                HorizontalAlignment="Center" 
+                VerticalAlignment="Center">
+                
+                <TextBlock Grid.Row="0" Grid.Column="0"
+                           Text="Pdf file" 
+                           VerticalAlignment="Center" />
+                
+                <Button Grid.Row="0" Grid.Column="1" 
+                        VerticalAlignment="Center" 
+                        MinWidth="85"
+                        Margin="10, 0"
+                        Command="{Binding OpenFileCommand}">
+                    Open File
+                </Button>
+                
+                <TextBlock Grid.Row="1" Grid.Column="0"  
+                           Text="{Binding FilePath, Mode=TwoWay}" />
+                
+                <TextBlock Grid.Row="2" Grid.Column="0"
+                           VerticalAlignment="Center" 
+                           Text="Save as" />
+                
+                <Button Grid.Row="2" Grid.Column="1" 
+                        VerticalAlignment="Center" 
+                        Margin="10, 0"
+                        MinWidth="85"
+                        Command="{Binding SaveToCommand}">
+                    Save File
+                </Button>
+                
+                <TextBlock Grid.Row="3" Grid.Column="0"  
+                           Text="{Binding SavePath, Mode=TwoWay}" />
+          
+                <Button Grid.Row="4" Grid.Column="1" 
+                        Margin="0, 20"
+                        HorizontalAlignment="Center" 
+                        VerticalAlignment="Center"
+                        Command="{Binding SaveFileCommand}">
+                    Convert
+                </Button>
+            
+                <TextBlock Grid.Row="5" Grid.Column="1"  
+                           HorizontalAlignment="Center" 
+                           Text="{Binding TextMessage, Mode=TwoWay}" />
+            </Grid>
+        </TabItem>
+    </TabControl>
+</Window>
